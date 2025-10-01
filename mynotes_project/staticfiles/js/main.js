@@ -1,0 +1,1 @@
+console.log('MyNotes JS loaded');

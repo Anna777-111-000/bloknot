@@ -1,0 +1,113 @@
+/* Стили для формы создания заметки */
+.note-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.note-form h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 300px;
+    resize: vertical;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #45a049;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    border-radius: 4px 0 0 4px !important;
+}
+
+.search-btn {
+    border-radius: 0 4px 4px 0 !important;
+}
+/* Стили для поиска в навбаре */
+.navbar-search {
+    width: 300px; /* Ширина поля поиска */
+    margin-right: 20px;
+}
+
+.navbar-search .form-control {
+    border-radius: 4px 0 0 4px;
+}
+
+.navbar-search .btn {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.filter(owner=self.request.user)
+        return context
