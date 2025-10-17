@@ -22,3 +22,14 @@ cd bloknot
 - django-crispy-forms
 - django-markdownx
 - Bootstrap 5
+
+
+## Запуск
+git clone https://github.com/Anna777-111-000/bloknot.git
+cd bloknot
+python3 -m venv venv
+source venv/bin/activate
+cd mynotes_project
+pip install -r requirements.txt
+pip install django-markdownx  
+python manage.py runserver
